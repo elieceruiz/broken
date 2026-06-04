@@ -1,37 +1,40 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>broken</title>
+  <title>Romper el hielo</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="app">
+  <main class="app">
     <section class="screen active" id="screen-1">
-      <img src="assets/hielo-inicio.png" alt="Pantalla inicial" class="bg" />
-      <div class="overlay start-overlay">
-        <button id="startBtn" class="btn">Empezar</button>
+      <div class="frame">
+        <img src="assets/hielo-inicio.png" alt="Cubo de hielo" class="bg" />
+        <div class="overlay">
+          <h1>¿Me ayudas a romper el hielo?</h1>
+          <button id="startBtn" class="btn">Empezar</button>
+        </div>
       </div>
     </section>
 
     <section class="screen" id="screen-2">
-      <img src="assets/hielo-tocalo.png" alt="Tócalo" class="bg" />
-      <button id="touchBtn" class="hotspot" aria-label="Tocar"></button>
+      <div class="frame">
+        <img src="assets/hielo-tocalo.png" alt="Tócalo" class="bg" />
+        <button id="cubeBtn" class="cube-hitbox" aria-label="Tocar cubo"></button>
+        <p id="hintText" class="hint">Tócalo</p>
+      </div>
     </section>
 
     <section class="screen" id="screen-3">
-      <img src="assets/hielo-pena.png" alt="Uy le dio pena" class="bg" />
-      <button id="finalBtn" class="hotspot" aria-label="Continuar"></button>
-    </section>
-
-    <section class="screen" id="screen-4">
-      <img src="assets/hielo-final.png" alt="Final" class="bg" />
-      <div class="overlay final-overlay">
-        <h2>Gracias por ayudarme a romper el hielo</h2>
+      <div class="frame">
+        <img src="assets/hielo-final.png" alt="Final" class="bg" />
+        <div class="overlay final">
+          <h2>Gracias por ayudarme a romper el hielo</h2>
+        </div>
       </div>
     </section>
-  </div>
+  </main>
 
   <script src="app.js"></script>
 </body>
