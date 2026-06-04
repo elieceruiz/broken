@@ -1,41 +1,67 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <!-- Configuración básica del documento -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Título de la pestaña -->
   <title>Romper el hielo</title>
+
+  <!-- Hoja de estilos externa -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Contenedor principal de la app -->
   <main class="app">
+
+    <!-- Pantalla 1: inicio -->
     <section class="screen active" id="screen-1">
       <div class="frame">
+        <!-- Imagen de fondo de la pantalla inicial -->
         <img src="assets/hielo-inicio.png" alt="Cubo de hielo" class="bg" />
+
+        <!-- Capa superior con botón de arranque -->
         <div class="overlay">
+          <!-- Título vacío: la instrucción ya viene en la imagen -->
           <h1></h1>
+
+          <!-- Botón para pasar a la siguiente pantalla -->
           <button id="startBtn" class="btn">Empezar</button>
         </div>
       </div>
     </section>
 
+    <!-- Pantalla 2: interacción con el cubo -->
     <section class="screen" id="screen-2">
       <div class="frame">
+        <!-- Imagen de fondo con la indicación visual -->
         <img src="assets/hielo-tocalo.png" alt="Tócalo" class="bg" />
+
+        <!-- Área invisible clickeable sobre el cubo -->
         <button id="cubeBtn" class="cube-hitbox" aria-label="Tocar cubo"></button>
+
+        <!-- Texto auxiliar controlado por JS -->
         <p id="hintText" class="hint"></p>
       </div>
     </section>
 
+    <!-- Pantalla 3: final -->
     <section class="screen" id="screen-3">
       <div class="frame">
+        <!-- Imagen final -->
         <img src="assets/hielo-final.png" alt="Final" class="bg" />
+
+        <!-- Capa final para el mensaje de cierre -->
         <div class="overlay final">
           <h2></h2>
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- Lógica externa de interacción -->
   <script src="app.js"></script>
 </body>
 </html>
